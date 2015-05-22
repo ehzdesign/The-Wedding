@@ -1,0 +1,196 @@
+/*******************************
+  BASE 
+  *******************************/
+
+  *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  img{
+    max-width: 100%;
+  }
+
+
+
+
+
+
+/*******************************
+ BODY 
+ *******************************/
+
+
+ body{
+  background-color: #eee;
+  color: #757677;
+  font-size: 62.5%;
+  font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana";
+}
+
+
+
+
+/*******************************
+ MAIN CONTENT 
+ *******************************/
+
+
+ .content{
+  max-width: 1140px;
+  margin: 30px auto;
+  background-color: #fff;
+  position: relative;
+
+}
+
+.wrapper{
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+
+/*******************************
+ MAIN NAV
+ *******************************/
+ 
+
+ .navbar{
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}
+
+
+
+
+.main-nav{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: none;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 1.4em;
+  letter-spacing: .1em;
+  background-color: #fff;
+  text-transform: uppercase;
+  
+}
+
+.main-nav a {
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.main-nav a:hover{
+  opacity: .6;
+}
+
+
+.main-nav__link{
+  display: inline-block;
+
+
+  
+}
+
+
+
+/*******************************
+ COUNTDOWN SECTION
+ *******************************/
+ 
+ .countdown{
+  background-image: url('http://41.media.tumblr.com/203fe7d3eec1481b5c51b7c0ffe034e6/tumblr_nmd79vZWuv1st5lhmo1_1280.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 750px;
+  background-size: contain;
+ /* width: 100%;*/
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  text-align: center;
+}
+
+.clock{
+  font-size: 2em;
+  color: #fff;
+}
+
+
+/*******************************
+ EVENT DETAILS SECTION
+ *******************************/
+
+.details{
+  background-color: #d06060;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.details img {
+  max-width: 80%;
+}
+
+
+
+
+
+
+
+/*******************************
+ MAP SECTION
+ *******************************/
+ .map-container{
+   position: relative;
+   padding-bottom: 40%;
+   height: 0;
+   overflow: hidden;
+ }
+
+
+
+
+.googlemap {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/*******************************
+FORM SECTION
+ *******************************/
+
+
+.rsvp{
+  background-color: #7EB3BB;
+  height: 20vh;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  color: #fff;
+
+}
+
+.rsvp__form{
+  font-size: 2.0em;
+  text-align: center;
+}
+
+.btn{
+  background-color: #d06060;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chris and Lisa Wedding</title>
+</head>
+<link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+<link rel="stylesheet" href="css/main.css">
+<body>
+  
+
+    <!-- main-nav -->
+    <nav class= "navbar">
+      <ul class="main-nav" id="mainNav">
+        <li class="main-nav__link">
+          <a href="#countdown">countdown</a>
+        </li>
+        <li class="main-nav__link">
+          <a href="#instagram">instagram</a>
+        </li>
+        <li class="main-nav__link">
+          <a href="#messages">messages</a>
+        </li>
+        <li class="main-nav__link">
+          <a href="#details">details</a>
+        </li>
+        <li class="main-nav__link">
+          <a href="#map">map</a>
+        </li>
+        <li class="main-nav__link">
+          <a href="#honeyfund">honeyfund</a>
+        </li>
+        <li class="main-nav__link">
+          <a href="#rsvp">rsvp</a>
+        </li>
+      </ul>
+    </nav>
+
+  <!-- main content of site -->
+  <div class="content">
+
+    <!-- countdown section -->
+    <section id="countdown" class="countdown">
+      <div class="wrapper">
+        <p class="clock"></p>
+      </div>
+    </section>
+    <!-- instagram section -->
+    <section id="instagram" class="instagram"></section>
+    <!-- messages feed section -->
+    <section id="messages" class="messages"></section>
+    <!-- event details section -->
+    <section id="details" class="details">
+      <div class="wrapper">
+        <img src="images/details.svg" alt="details-info">
+      </div>
+    </section>
+    <!-- google map section -->
+    <section id="map" class="map">
+      <div class="map-container">
+        <iframe class="googlemap" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2877.5277775884747!2d-79.63033434505891!3d43.84488843362457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0xe2c8a672c2fda0dc!2sThe+Doctor&#39;s+House!5e0!3m2!1sen!2sca!4v1431752821777" width="600" height="450" frameborder="0" style="border:0"></iframe>
+      </div>
+    </section>
+    <!-- honeyfund section -->
+    <section id="honeyfund" class="honeyfund"></section>
+    <!-- rsvp form section -->
+    <section id="rsvp" class="rsvp">
+      <div class="wrapper">
+        <form action="rsvp.php" method="post" class="rsvp__form">
+          <label>
+            <input type="text" name="name" id="fullname" placeholder="Full Name" class="textinput" required>
+          </label>
+          <input type="radio" name="attendancechoice" value="wouldn't miss it for the world" id="attending" class="radiobtn" checked="checked" required >
+          <label for="attending">wouldn't miss it for the world</label>
+          <input type="radio" name="attendancechoice" value="will be there in spirit" id="not-attending"class="radiobtn">
+          <label for="not-attending">will be there in spirit</label>
+          <input type="submit" value="send RSVP" class="btn">
+        </form>
+      </div>
+    </section>
+    
+
+  </div>
+  
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
+  <script src="bower_components/waypoints/lib/noframework.waypoints.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

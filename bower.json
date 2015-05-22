@@ -1,0 +1,25 @@
+{
+  "name": "Chris and Lisa Wedding",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ehzdesign/Chris-and-Lisa-Wedding",
+  "authors": [
+    "ehzdesign <91.eahz@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jquery": "~2.1.4",
+    "normalize.css": "~3.0.3",
+    "jquery.countdown": "~2.0.4",
+    "waypoints": "~3.1.1"
+  }
+}
