@@ -13,7 +13,12 @@
   }
 
   img{
-    max-width: 100%;
+    max-width: 80%;
+  }
+
+  input{
+    outline: 0;
+    border: none;
   }
 
 
@@ -28,11 +33,67 @@
 
  body{
   background-color: #eee;
+  background-image: url('../images/wood.jpg');
+  background-attachment: fixed;
   color: #757677;
   font-size: 62.5%;
   font-family: "Myriad Set Pro","Lucida Grande","Helvetica Neue","Helvetica","Arial","Verdana";
 }
 
+
+/*******************************
+ MAIN NAV
+ *******************************/
+ 
+
+ .navbar{
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+}
+
+
+
+
+.main-nav{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 1.4em;
+  letter-spacing: .1em;
+  background-color: #fff;
+  background-color: rgba(255,255,255,1);
+  text-transform: uppercase;
+  
+}
+
+
+.main-nav a {
+  color: #6d6e70;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.main-nav a:hover{
+  opacity: .6;
+}
+
+
+.main-nav__link{
+  display: inline-block;
+
+
+  
+}
 
 
 
@@ -56,56 +117,6 @@
 
 
 
-/*******************************
- MAIN NAV
- *******************************/
- 
-
- .navbar{
-  width: 100%;
-  position: fixed;
-  z-index: 100;
-}
-
-
-
-
-.main-nav{
-  padding-top: 20px;
-  padding-bottom: 20px;
-  max-width: 1140px;
-  margin: 0 auto;
-  display: none;
-  -webkit-flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-  -webkit-align-items: center;
-  align-items: center;
-  font-size: 1.4em;
-  letter-spacing: .1em;
-  background-color: #fff;
-  text-transform: uppercase;
-  
-}
-
-.main-nav a {
-  -webkit-transition: all .3s ease;
-  -o-transition: all .3s ease;
-  transition: all .3s ease;
-}
-
-.main-nav a:hover{
-  opacity: .6;
-}
-
-
-.main-nav__link{
-  display: inline-block;
-
-
-  
-}
-
 
 
 /*******************************
@@ -113,35 +124,78 @@
  *******************************/
  
  .countdown{
-  background-image: url('http://41.media.tumblr.com/203fe7d3eec1481b5c51b7c0ffe034e6/tumblr_nmd79vZWuv1st5lhmo1_1280.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 750px;
-  background-size: contain;
- /* width: 100%;*/
   display: -webkit-flex;
   -webkit-align-items: center;
   text-align: center;
+  padding-top: 100px;
 }
 
+
 .clock{
-  font-size: 2em;
-  color: #fff;
+  font-size: 2.4em;
+  color: #6d6e70;
+  margin-top: 60px;
+  margin-bottom: 60px;
 }
+
+.avatar-baseline{
+ width: 90%;
+ height: 1px;
+ margin-top: -2px;
+ margin-bottom: 10px;
+ margin: -2px auto 10px;
+ background-color: rgba(188, 207, 228, 0.22);;
+}
+
+img.scroll-arrow {
+  /*width: 100%;*/
+  position: relative;
+  left: -2%;
+  margin: 30px 0;
+}
+
+
+/*******************************
+ INSTAGRAM SECTION
+ *******************************/
+
+
+ .instagram{
+
+ }
+
+
+ .instafeed{
+  text-align: center;
+  width: 100%;
+  padding: 30px;
+}
+
+
+
+/*******************************
+ MESSAGES SECTION
+ *******************************/
+ .messages{
+  height: 500px;
+  background-color: #6d6e70;
+}
+
+
 
 
 /*******************************
  EVENT DETAILS SECTION
  *******************************/
 
-.details{
+ .details{
   background-color: #d06060;
   text-align: center;
   padding: 100px 0;
 }
 
 .details img {
-  max-width: 80%;
+  max-width: 60%;
 }
 
 
@@ -163,34 +217,153 @@
 
 
 
-.googlemap {
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+ .googlemap {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 
 /*******************************
 FORM SECTION
- *******************************/
+*******************************/
 
 
 .rsvp{
+  padding: 100px 0;
   background-color: #7EB3BB;
-  height: 20vh;
-  display: -webkit-flex;
-  -webkit-align-items: center;
   color: #fff;
+  text-align: center;
 
 }
 
-.rsvp__form{
+
+.rsvp__image{
+  max-width: 30%;
+}
+
+.rsvp__form, .rsvp__form__info{
   font-size: 2.0em;
-  text-align: center;
+}
+
+.rsvp__form, .rsvp__form-expanded{
+  width: 70%;
+  margin: 40px auto;
+
+}
+
+.rsvp__form__info{
+  background-color: #6fa2a9;
+}
+
+
+input[type='text'],[type="email"], .rsvp__form__info__notes__textarea{
+  display: block;
+  margin: 30px auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  height: 50px;
+  color: #7f7f7f;
+}
+
+input[name='family-member']{
+  margin: 0;
+
+}
+
+#plus1__text-input{
+  display: none;
+
+}
+
+#family-member__input-section{
+  display: none;
+}
+
+.family-member__input{
+ display: -webkit-flex;
+ display: flex;
+ -webkit-justify-content: space-between;
+ justify-content: space-between;
+ text-align: left;
+ margin:30px auto;
+ /*will be shown with js when plus family is clicked*/
+}
+
+.add-family-member-btn{
+  height: 50px;
+  width: 50px;
+  margin-left: 2%;
+  cursor: pointer;
+}
+
+/*.add-family-member-btn:hover #add-family-member-btn-circle{
+  fill: red;
+}
+
+.add-family-member-btn:hover #horizontal-line{
+  stroke: white;
+}
+
+.add-family-member-btn:hover #vertical-line{
+  stroke: red;
+}
+*/
+
+
+
+.rsvp__form__radio-selection{
+  display: -webkit- flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+
+}
+
+.whos-attending, .rsvp__form__info__notes,
+.rsvp__form__submit-button{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.rsvp__form__info__notes{
+  text-align: left;
+  margin-top: 60px;
+}
+
+.rsvp__form__info{
+  padding: 40px 0;
+}
+
+.rsvp__form__info__notes__textarea{
+  height: 200px;
+  padding-top: 20px;
+  resize: none;
+
+}
+
+
+input[type="radio"] {
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+
+}
+
+.radio-select {
+  align-self: flex-start;
+  -webkit-align-self: flex-start;
+}
+
+
+.rsvp__form__submit-button{
+  text-align: left;
 }
 
 .btn{
+  padding: 15px 30px;
   background-color: #d06060;
 }

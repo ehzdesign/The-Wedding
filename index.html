@@ -5,36 +5,37 @@
   <title>Chris and Lisa Wedding</title>
 </head>
 <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
+<link rel="stylesheet" href="css/css3animations.css">
 <link rel="stylesheet" href="css/main.css">
 <body>
-  
 
-    <!-- main-nav -->
-    <nav class= "navbar">
-      <ul class="main-nav" id="mainNav">
-        <li class="main-nav__link">
-          <a href="#countdown">countdown</a>
-        </li>
-        <li class="main-nav__link">
-          <a href="#instagram">instagram</a>
-        </li>
-        <li class="main-nav__link">
-          <a href="#messages">messages</a>
-        </li>
-        <li class="main-nav__link">
-          <a href="#details">details</a>
-        </li>
-        <li class="main-nav__link">
-          <a href="#map">map</a>
-        </li>
-        <li class="main-nav__link">
-          <a href="#honeyfund">honeyfund</a>
-        </li>
-        <li class="main-nav__link">
-          <a href="#rsvp">rsvp</a>
-        </li>
-      </ul>
-    </nav>
+
+  <!-- main-nav -->
+  <nav class= "navbar">
+    <ul class="main-nav" id="mainNav">
+      <li class="main-nav__link">
+        <a href="#countdown">countdown</a>
+      </li>
+      <li class="main-nav__link">
+        <a href="#instagram">instagram</a>
+      </li>
+      <li class="main-nav__link">
+        <a href="#messages">messages</a>
+      </li>
+      <li class="main-nav__link">
+        <a href="#details">details</a>
+      </li>
+      <li class="main-nav__link">
+        <a href="#map">map</a>
+      </li>
+      <li class="main-nav__link">
+        <a href="#honeyfund">honeyfund</a>
+      </li>
+      <li class="main-nav__link">
+        <a href="#rsvp">rsvp</a>
+      </li>
+    </ul>
+  </nav>
 
   <!-- main content of site -->
   <div class="content">
@@ -42,11 +43,19 @@
     <!-- countdown section -->
     <section id="countdown" class="countdown">
       <div class="wrapper">
+        <img src="images/hero-text.png" alt="" class="hero-text">
         <p class="clock"></p>
+        <div class="avatars">
+          <img src="images/avatars.png" alt="lisa and chris avatars">
+          <div class="avatar-baseline"></div>
+        </div>
+        <a href="#instagram"><img src="images/scroll-arrow.png" alt="scroll arrow" class="scroll-arrow floating"></a>
       </div>
     </section>
     <!-- instagram section -->
-    <section id="instagram" class="instagram"></section>
+    <section id="instagram" class="instagram">
+      <div id="instafeed" class="instafeed"></div>
+    </section>
     <!-- messages feed section -->
     <section id="messages" class="messages"></section>
     <!-- event details section -->
@@ -66,25 +75,72 @@
     <!-- rsvp form section -->
     <section id="rsvp" class="rsvp">
       <div class="wrapper">
+        <img src="images/rsvp.png" alt="rsvp image" class="rsvp__image">
         <form action="rsvp.php" method="post" class="rsvp__form">
           <label>
-            <input type="text" name="name" id="fullname" placeholder="Full Name" class="textinput" required>
+            <input type="text" name="name" id="fullname" placeholder="full name" class="textinput" required>
           </label>
-          <input type="radio" name="attendancechoice" value="wouldn't miss it for the world" id="attending" class="radiobtn" checked="checked" required >
-          <label for="attending">wouldn't miss it for the world</label>
-          <input type="radio" name="attendancechoice" value="will be there in spirit" id="not-attending"class="radiobtn">
-          <label for="not-attending">will be there in spirit</label>
-          <input type="submit" value="send RSVP" class="btn">
+          <div class="rsvp__form__radio-selection">
+            <div class="radio-select">
+              <input type="radio" name="attendancechoice" value="wouldn't miss it for the world" id="attending" class="radiobtn" required >
+              <label for="attending">wouldn't miss it for the world</label>
+            </div>
+            <div class="radio-select">
+              <input type="radio" name="attendancechoice" value="will-be-there-in-spirit" id="not-attending"class="radiobtn" required>
+              <label for="not-attending">will be there in spirit</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="rsvp__form__info">
+          <div class="wrapper">
+            <div class="rsvp__form__radio-selection whos-attending">
+              <p>who's attending:</p>
+              <div class="radio-select">
+                <input type="radio" name="how-many" value="just-me" id="just-me-radio" class="radiobtn" required >
+                <label for="just-me-radio">just me</label>
+              </div>
+              <div class="radio-select">
+                <input type="radio" name="how-many" value="plus-1" id="plus1-radio"class="radiobtn">
+                <label for="plus1-radio">+ 1</label>
+              </div>
+              <div class="radio-select">
+                <input type="radio" name="how-many" value="plus-family" id="plusfamily-radio"class="radiobtn">
+                <label for="plusfamily-radio">+ family</label>
+              </div>
+            </div>
+            <div class="rsvp__form__info__notes">
+              <input type="text" name="plus1" id="plus1__text-input" class="textinput" placeholder="full name" required>
+              <div id="family-member__input-section">
+                <div class="family-member__input" id="family-member__input">
+                  <input type="text" name="family-member" placeholder="full name" id="plusfamily__text-input" required>
+                    <svg class="add-family-member-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.5 50.5">
+                      <title>add family member</title>
+                      <circle id="add-family-member-btn-circle" fill="#7EB3BB" cx="25.2" cy="25.2" r="25.2"/>
+                      <line fill="none" id="vertical-line" stroke="#6FA2A9" stroke-width="2.1196" stroke-miterlimit="10" x1="25.2" y1="10.8" x2="25.2" y2="40.2"/>
+                      <line fill="none" id="horizontal-line" stroke="#6FA2A9" stroke-width="2.1196" stroke-miterlimit="10" x1="10.5" y1="25.5" x2="39.9" y2="25.5"/>
+                    </svg>  
+                </div>
+              </div>
+            <p class="rsvp__form__info__notes__message">Please let us know of any dietary restrictions or leave us a heartwarming message.</p>
+            <textarea name="notes" class="rsvp__form__info__notes__textarea" placeholder="notes / well wishes"></textarea>
+            <input type="email" name="email" id="email" class="email" placeholder="email" required>
+          </div>
+          <div class="rsvp__form__submit-button">
+            <input type="submit" value="Send RSVP" class="btn">
+          </div>
         </form>
       </div>
-    </section>
-    
+    </div>
+  </section>
 
-  </div>
-  
-  <script src="bower_components/jquery/dist/jquery.js"></script>
-  <script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
-  <script src="bower_components/waypoints/lib/noframework.waypoints.min.js"></script>
-  <script src="js/script.js"></script>
+
+</div>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/jquery.countdown/dist/jquery.countdown.js"></script>
+<script src="bower_components/waypoints/lib/noframework.waypoints.min.js"></script>
+<script src="bower_components/instafeed.js/instafeed.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
