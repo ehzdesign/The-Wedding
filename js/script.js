@@ -30,7 +30,10 @@ var waypoint = new Waypoint({
   handler: function(direction) {
 
    if(direction === 'down') {
-    $('.main-nav').css('display', '-webkit-flex')
+    $('.main-nav').css({
+      display: '-webkit-flex',
+      display: 'flex'
+    })
     .hide()
     .fadeIn('fast');
   } else if (direction === 'up'){
@@ -43,7 +46,7 @@ var waypoint = new Waypoint({
 })
 
 
-// Instagram feed script
+// Instagram feed 
 // ===================================
 
  var feed = new Instafeed({
@@ -95,6 +98,8 @@ $('input[type=radio]').on('click', function(event) {
         $('.family-member__input').slice(1).remove();
       });
     }
+
+    // try to change this to other way around on wouldnt miss it for the world 'checked'
 
   if($('input[value=will-be-there-in-spirit]').prop('checked')) {
     console.log('will be there in spirit is checked');

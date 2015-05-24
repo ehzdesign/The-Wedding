@@ -61,7 +61,7 @@
   padding-bottom: 20px;
   max-width: 1140px;
   margin: 0 auto;
-  display: flex;
+  display: none;
   -webkit-flex-wrap: wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around;
@@ -155,6 +155,42 @@ img.scroll-arrow {
 }
 
 
+.floating{
+  animation-name: floating;
+  -webkit-animation-name: floating;
+
+  animation-duration: 1.5s; 
+  -webkit-animation-duration: 1.5s;
+
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0%);  
+  }
+  50% {
+    transform: translateY(8%);  
+  } 
+  100% {
+    transform: translateY(0%);
+  }     
+}
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0%);  
+  }
+  50% {
+    -webkit-transform: translateY(8%);  
+  } 
+  100% {
+    -webkit-transform: translateY(0%);
+  }     
+}
+
+
 /*******************************
  INSTAGRAM SECTION
  *******************************/
@@ -198,6 +234,24 @@ img.scroll-arrow {
   max-width: 60%;
 }
 
+.getdirections{
+  background-color: #FFF;
+  font-size: 2em;
+  margin-top: 60px;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  color: rgb(208, 96, 96);
+  border: 10px solid rgb(208, 96, 96);
+  border-style: double;
+  transition: all .2s ease;
+}
+
+.getdirections:hover{
+  background-color: rgb(208,96,96);
+  border: 10px solid white;
+  border-style: double;
+  color: white;
+}
 
 
 
