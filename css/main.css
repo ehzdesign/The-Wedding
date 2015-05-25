@@ -63,6 +63,7 @@
   margin: 0 auto;
   display: none;
   -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-justify-content: space-around;
   justify-content: space-around;
   -webkit-align-items: center;
@@ -281,6 +282,34 @@ img.scroll-arrow {
 
 
 /*******************************
+HONEYFUND SECTION
+*******************************/
+.honeyfund__gallery{
+  display: -webkit-flex;
+  display: flex;
+}
+
+.honeyfund__gallery__item{
+  height: 15vw;
+  width: 100%;
+}
+
+.honeyfund__gallery__item:first-child{
+  background-image: url('http://36.media.tumblr.com/1387afa64c7a57a03ab57ebc03597926/tumblr_nnw47ei7Ln1st5lhmo1_1280.jpg');
+}
+
+.honeyfund__gallery__item:nth-child(2){
+  background-image: url('http://36.media.tumblr.com/c5d426af46a281611f286a9accef83ca/tumblr_nndj4wwY821st5lhmo1_1280.jpg');
+}
+
+.honeyfund__gallery__item:nth-child(3){
+  background-image: url('http://40.media.tumblr.com/c26fc659cdcd53ef1796debc21de52f6/tumblr_nnn7a2T31e1st5lhmo2_1280.jpg');
+}
+
+
+
+
+/*******************************
 FORM SECTION
 *******************************/
 
@@ -370,11 +399,15 @@ input[name='family-member']{
 
 
 .rsvp__form__radio-selection{
-  display: -webkit- flex;
+  display: -webkit-flex;
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
 
+}
+
+.rsvp__form__radio-selection:first-child{
+  display: none;
 }
 
 .whos-attending, .rsvp__form__info__notes,
@@ -414,8 +447,8 @@ input[type="radio"] {
 }
 
 .radio-select {
-  align-self: flex-start;
   -webkit-align-self: flex-start;
+  align-self: flex-start;
 }
 
 

@@ -99,15 +99,22 @@ $('input[type=radio]').on('click', function(event) {
       });
     }
 
-    // try to change this to other way around on wouldnt miss it for the world 'checked'
+  
 
   if($('input[value=will-be-there-in-spirit]').prop('checked')) {
     console.log('will be there in spirit is checked');
     $('.whos-attending').fadeOut(300);
+    $plusFamilyInput.add($plus1Input).hide();
     $('.rsvp__form__info__notes__message').text($notesMessageNotAttending)
       .hide().fadeIn(300);
   }else{
-    $('.whos-attending').fadeIn(300);
+    $('.whos-attending')
+    .css({
+      display: '-webkit-flex',
+      display: 'flex'
+    })
+    .hide()
+    .fadeIn(300);
     $('.rsvp__form__info__notes__message').text($notesMessageAttending)
     .hide().fadeIn(300);
 
