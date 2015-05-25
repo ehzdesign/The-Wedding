@@ -46,7 +46,7 @@ var waypoint = new Waypoint({
 })
 
 
-// Instagram feed 
+// Instagram feed script
 // ===================================
 
  var feed = new Instafeed({
@@ -81,7 +81,7 @@ $('input[type=radio]').on('click', function(event) {
       $notesMessageAttending = 'Please let us know of any dietary restrictions or leave us a heartwarming message.',
       $notesMessageNotAttending = 'Aww, that’s too bad but we still love you. Want to leave us a heartwarming message?';
 
-  if($('input[value= plus-1').prop('checked')) {
+  if($('input[value=plus-1]').prop('checked')) {
    $plus1Input.show(300, function(){
      console.log('plus1 radio button selected');
    });
@@ -89,7 +89,7 @@ $('input[type=radio]').on('click', function(event) {
       $plus1Input.hide(300);
   }
 
-  if($('input[value=plus-family').prop('checked')) {
+  if($('input[value=plus-family]').prop('checked')) {
    $plusFamilyInput.show(300).hide().show(300, function(){
      console.log('plus-family radio button selected'); 
    });
@@ -124,6 +124,7 @@ $('input[type=radio]').on('click', function(event) {
 function addFamilyMember(){
   $('.family-member__input:first').clone(true)
   .hide()
+  .find("input:text").val("").end()
   .appendTo('#family-member__input-section')
   .fadeIn(300);
 }

@@ -1,4 +1,5 @@
-<?php $name = $_POST['name'];
+<?php 
+$name = $_POST['name'];
 $attendancechoice = $_POST['attendancechoice'];
 $formcontent="From: $name \n Response: I $attendancechoice";
 $recipient = "91.eahz@gmail.com";

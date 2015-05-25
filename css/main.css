@@ -404,6 +404,12 @@ input[type="radio"] {
   height: 30px;
   width: 30px;
   vertical-align: middle;
+/*  border: none;
+  -moz-appearance: none !important;
+  -moz-border-bottom-colors: transparent !important;
+  -moz-border-left-colors: transparent !important;
+  -moz-border-right-colors: transparent !important;
+  -moz-border-top-colors: transparent !important;*/
 
 }
 
