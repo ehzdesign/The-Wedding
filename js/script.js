@@ -49,23 +49,41 @@ var waypoint = new Waypoint({
 // Instagram feed script
 // ===================================
 
- var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'MyCuteNieceOlivia', 
+//  var feed = new Instafeed({
+//         get: 'tagged',
+//         tagName: 'MyCuteNieceOlivia', 
        
-        clientId: '698a1ba199a648ceacf26e00e835f81a',
-        limit:'14'
-    });
-    feed.run();
+//         clientId: '698a1ba199a648ceacf26e00e835f81a',
+//         limit:'14'
+//     });
+//     feed.run();
 
-setInterval(function(){
-  $('#instafeed').fadeOut('fast', function() {
-    $(this).html(' ');
-  feed.run();
-  $('#instafeed').fadeIn('slow');
-    console.log('fade in');
-  });
-}, 80000);  
+// setInterval(function(){
+//   $('#instafeed').fadeOut('fast', function() {
+//     $(this).html(' ');
+//   feed.run();
+//   $('#instafeed').fadeIn('slow');
+//     console.log('fade in');
+//   });
+// }, 80000);  
+
+$.ajax({
+  type: 'GET',
+  url: "https://api.instagram.com/v1/tags/MyCuteNieceOlivia/media/recent?client_id=698a1ba199a648ceacf26e00e835f81a&count=14?callback=myCallBack",
+  contentType: "application/json",
+  dataType: "jsonp"
+}).done(function(data){
+    //console.log(data);
+    $.each(data.data, function (i, item) 
+    {
+      // var $newImage = $('<img src="'+item.images.low_resolution.url+'">');      
+      var $newImage = $('<a href="'+item.link+'"><img src="'+item.images.low_resolution.url+'"></a>');
+      var $newImageSecondary = $('<a href="'+item.link+'"><img src="'+item.images.low_resolution.url+'"></a>');    
+        $('#instafeed').append($newImage);
+        $('#instafeed-secondary').append($newImageSecondary);
+    });
+});;
+
 
 
 
