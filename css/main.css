@@ -236,22 +236,20 @@ img.scroll-arrow {
 }
 
 .getdirections{
-  background-color: #FFF;
+  background-color: #FFFFFF;
   font-size: 2em;
   margin-top: 60px;
   padding: 15px 30px;
-  text-transform: uppercase;
+  text-transform: capitalize;
   color: rgb(208, 96, 96);
-  border: 10px solid rgb(208, 96, 96);
-  border-style: double;
+  border: 1px solid transparent;
   transition: all .2s ease;
 }
 
 .getdirections:hover{
   background-color: rgb(208,96,96);
-  border: 10px solid white;
-  border-style: double;
   color: white;
+  border: 1px solid white;
 }
 
 
@@ -337,9 +335,6 @@ FORM SECTION
 
 }
 
-.rsvp__form__info{
-  background-color: #6fa2a9;
-}
 
 
 input[type='text'],[type="email"], .rsvp__form__info__notes__textarea{
@@ -423,6 +418,8 @@ input[name='family-member']{
 
 .rsvp__form__info{
   padding: 40px 0;
+  background-color: #6fa2a9;
+  display: none;
 }
 
 .rsvp__form__info__notes__textarea{
@@ -437,9 +434,9 @@ input[type="radio"] {
   height: 30px;
   width: 30px;
   vertical-align: middle;
-/*  border: none;
-  -moz-appearance: none !important;
-  -moz-border-bottom-colors: transparent !important;
+  border: none;
+  -moz-appearance: none;
+  /*-moz-border-bottom-colors: transparent !important;
   -moz-border-left-colors: transparent !important;
   -moz-border-right-colors: transparent !important;
   -moz-border-top-colors: transparent !important;*/

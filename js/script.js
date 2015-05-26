@@ -76,12 +76,22 @@ setInterval(function(){
 // =============================================================
 $('input[type=radio]').on('click', function(event) {
   
-  var $plus1Input = $('#plus1__text-input'),
+  var $notAttendingBtn = $('#not-attending'),
+      $attendingBtn = $('#attending'),
+      $rsvpFormInfo = $('.rsvp__form__info'),
+      $plus1Input = $('#plus1__text-input'),
       $plusFamilyInput = $('#family-member__input-section'),
       $notesMessageAttending = 'Please let us know of any dietary restrictions or leave us a heartwarming message.',
       $notesMessageNotAttending = 'Aww, that’s too bad but we still love you. Want to leave us a heartwarming message?';
 
-  if($('input[value=plus-1]').prop('checked')) {
+  // reveal rsvp notes section if either attending or not attending radio button selected
+  if(($attendingBtn).prop('checked') || ($notAttendingBtn).prop('checked')){
+    console.log('working');
+    $rsvpFormInfo.fadeIn('300');
+  }
+
+  // actions when plus1 radio is selected
+  if($('#plus1-radio').prop('checked')) {
    $plus1Input.show(300, function(){
      console.log('plus1 radio button selected');
    });
@@ -89,8 +99,9 @@ $('input[type=radio]').on('click', function(event) {
       $plus1Input.hide(300);
   }
 
-  if($('input[value=plus-family]').prop('checked')) {
-   $plusFamilyInput.show(300).hide().show(300, function(){
+  // actions when plus family radio is selected
+  if($('#plusfamily-radio').prop('checked')) {
+   $plusFamilyInput.hide().show(300, function(){
      console.log('plus-family radio button selected'); 
    });
   } else{
@@ -100,13 +111,14 @@ $('input[type=radio]').on('click', function(event) {
     }
 
   
-
-  if($('input[value=will-be-there-in-spirit]').prop('checked')) {
+  // actions when 'will be there in spirit' (same as not attending) radio is selected
+  if($notAttendingBtn.prop('checked')) {
     console.log('will be there in spirit is checked');
     $('.whos-attending').fadeOut(300);
     $plusFamilyInput.add($plus1Input).hide();
     $('.rsvp__form__info__notes__message').text($notesMessageNotAttending)
-      .hide().fadeIn(300);
+      .hide()
+      .fadeIn(300);
   }else{
     $('.whos-attending')
     .css({
@@ -119,6 +131,8 @@ $('input[type=radio]').on('click', function(event) {
     .hide().fadeIn(300);
 
   }
+
+
 
 });
 
