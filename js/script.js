@@ -1,8 +1,16 @@
+$(function(){
+
+// Smooth scroll on nav links
+// ==========================================
+$('#mainNav a').smoothScroll();
+
+
+
+
 
 // Countdown clock function
 //==========================================
 
-$(function(){
 
  $('.clock').countdown('2015/09/14', function(event) {
    

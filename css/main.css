@@ -496,6 +496,7 @@ input[name='family-member']{
   height: 200px;
   padding-top: 20px;
   resize: none;
+  overflow: hidden;
 
 }
 
