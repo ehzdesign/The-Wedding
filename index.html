@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chris and Lisa Wedding</title>
 </head>
 <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
@@ -57,7 +58,7 @@
       <div id="instafeed-secondary" class="instafeed"></div>
     </section>
     <!-- messages feed section -->
-    <section id="messages" class="messages"></section>
+    <!-- <section id="messages" class="messages"></section> -->
     <!-- event details section -->
     <section id="details" class="details">
       <div class="wrapper">
@@ -76,16 +77,14 @@
     <!-- honeyfund section -->
     <section id="honeyfund" class="honeyfund">
       <div class="honeyfund__gallery">
-        <div class="honeyfund__gallery__item"></div>
-        <div class="honeyfund__gallery__item"></div>
-        <div class="honeyfund__gallery__item"></div>
+      
       </div>
     </section>
     <!-- rsvp form section -->
     <section id="rsvp" class="rsvp">
       <div class="wrapper">
         <img src="images/rsvp.png" alt="rsvp image" class="rsvp__image">
-        <form action="rsvp.php" method="post" class="rsvp__form">
+        <form action="rsvp2.php" method="post" class="rsvp__form">
           <label>
             <input type="text" name="name" id="fullname" placeholder="full name" class="textinput" required>
           </label>
@@ -119,10 +118,10 @@
               </div>
             </div>
             <div class="rsvp__form__info__notes">
-              <input type="text" name="plus1" id="plus1__text-input" class="textinput" placeholder="full name" required>
+              <input type="text" name="plus-1" id="plus1__text-input" class="textinput" placeholder="full name">
               <div id="family-member__input-section">
                 <div class="family-member__input" id="family-member__input">
-                  <input type="text" name="family-member" placeholder="full name" id="plusfamily__text-input" required>
+                  <input type="text" name="family-member" placeholder="full name">
                     <svg class="add-family-member-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.5 50.5">
                       <title>add family member</title>
                       <circle id="add-family-member-btn-circle" fill="#7EB3BB" cx="25.2" cy="25.2" r="25.2"/>
@@ -136,7 +135,7 @@
             <input type="email" name="email" id="email" class="email" placeholder="email" required>
           </div>
           <div class="rsvp__form__submit-button">
-            <input type="submit" value="Send RSVP" class="btn">
+            <input type="submit" name="rsvp__form__submit" value="Send RSVP" class="btn">
           </div>
         </form>
       </div>

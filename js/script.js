@@ -2,7 +2,7 @@ $(function(){
 
 // Smooth scroll on nav links
 // ==========================================
-$('#mainNav a').smoothScroll();
+$('#mainNav a, #countdown a').smoothScroll();
 
 
 
