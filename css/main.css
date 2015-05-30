@@ -391,7 +391,10 @@ img.scroll-arrow {
 /*******************************
 HONEYFUND SECTION
 *******************************/
-
+.honeyfund__gallery__image-container{
+  width: 33.333%;
+  float: left;
+}
 
 
 
