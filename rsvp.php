@@ -46,7 +46,7 @@ $mail->AltBody = 'This is a plain-text message body';
 
 if (!$mail->Send()) {
   echo "Mailer Error: " . $mail->ErrorInfo;
-}
+} 
 //$name = $_POST['name'];
 //$attendancechoice = $_POST['attendancechoice'];
 //$formcontent="From: $name \n Response: I $attendancechoice";
