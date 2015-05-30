@@ -1,0 +1,16 @@
+{
+    "name": "ehzdesign/the-wedding",
+    "description": "Eric's Project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Eric",
+            "email": "eric@email.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+      "php": ">=5.3.3",
+      "phpmailer/phpmailer": "~5.2"
+    }
+}
