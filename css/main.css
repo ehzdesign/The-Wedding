@@ -80,13 +80,18 @@
 
 .main-nav a {
   color: #6d6e70;
+  padding: 10px 15px;
   -webkit-transition: all .3s ease;
   -o-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 .main-nav a:hover{
-  opacity: .6;
+  background-color: #7EB3BB;
+  background-color: rgb(126, 179, 187);
+  color: white;
+  border: radius;
+  border-radius: 3px;
 }
 
 
@@ -146,6 +151,10 @@
   padding-top: 100px;
 }
 
+
+
+
+
 .countdown img{
   max-width: 75%;
 }
@@ -167,6 +176,15 @@
   margin-bottom: 60px;
 }
 
+@media screen and (max-width:700px) {
+
+  .clock{
+    font-size: 1.6em;
+  }
+  
+}
+
+
 .avatar-baseline{
  width: 90%;
  height: 1px;
@@ -181,6 +199,13 @@ img.scroll-arrow {
   position: relative;
   left: -2%;
   margin: 30px 0;
+}
+
+@media screen and (max-width:600px) {
+  
+  img.scroll-arrow{
+    width: 11vmin;
+  }
 }
 
 
@@ -247,6 +272,18 @@ img.scroll-arrow {
 
   }
 
+  @media screen and (max-width: 600px) {
+    
+    .instafeed{
+      width:1500px;
+    }
+
+    .instafeed img{
+      max-width: 10%;
+    }
+
+  }
+
   #instafeed{
     position: absolute;
     /*transform: translateX(0%);*/
@@ -271,7 +308,7 @@ img.scroll-arrow {
 
 /*  .instafeed img:hover{
    -webkit-filter: none;
-  }*/
+   }*/
 
    
 
@@ -279,7 +316,7 @@ img.scroll-arrow {
    -webkit-animation-play-state: paused;
    animation-play-state: paused;
   }
-*/
+  */
 
 
 
@@ -338,6 +375,12 @@ img.scroll-arrow {
   }
 }
 
+@media screen and (max-width:600px){
+  .details img {
+    max-width: 95%;
+  }
+}
+
 .getdirections{
   background-color: #FFFFFF;
   font-size: 2em;
@@ -348,6 +391,13 @@ img.scroll-arrow {
   border: 1px solid transparent;
   transition: all .2s ease;
 }
+
+@media screen and (max-width:600px){
+  .getdirections {
+    font-size: 1.9em;
+  }
+}
+
 
 .getdirections:hover{
   background-color: rgb(208,96,96);
@@ -374,12 +424,12 @@ img.scroll-arrow {
   .map-container{
     height: 45vh;
   }
- }
+}
 
 
 
 
- .googlemap {
+.googlemap {
   position: absolute;
   top:0;
   left: 0;
@@ -391,10 +441,10 @@ img.scroll-arrow {
 /*******************************
 HONEYFUND SECTION
 *******************************/
-.honeyfund__gallery__image-container{
+/*.honeyfund__gallery__image-container{
   width: 33.333%;
   float: left;
-}
+  }*/
 
 
 
@@ -405,10 +455,11 @@ FORM SECTION
 
 
 .rsvp{
-  padding: 100px 0;
+  padding: 100px 0 60px;
   background-color: #7EB3BB;
   color: #fff;
   text-align: center;
+  font-size: 2.0em;
 
 }
 
@@ -417,14 +468,27 @@ FORM SECTION
   max-width: 30%;
 }
 
-.rsvp__form, .rsvp__form__info{
-  font-size: 2.0em;
+@media screen and (max-width: 600px) {
+  
+  .rsvp__image{
+    max-width: 50%;
+  }
+
 }
 
-.rsvp__form, .rsvp__form-expanded{
-  width: 70%;
-  margin: 40px auto;
 
+.rsvp__form{
+  width: 70%;
+  margin: 70px auto 0;
+
+}
+
+@media screen and (max-width: 700px) {
+
+  .rsvp__form{
+    width: 90%;
+  }
+  
 }
 
 
@@ -493,6 +557,14 @@ input[name='family-member']{
 
 }
 
+@media screen and (max-width:600px) {
+  .rsvp__form__radio-selection{
+    flex-direction:column;
+    -webkit-flex-direction:column;
+    text-align: left;
+  }
+}
+
 .rsvp__form__radio-selection:first-child{
   display: none;
 }
@@ -503,6 +575,15 @@ input[name='family-member']{
   margin: 0 auto;
 }
 
+@media screen and (max-width: 700px) {
+
+  .whos-attending, .rsvp__form__info__notes,
+  .rsvp__form__submit-button{
+    width: 90%;
+  }
+  
+}
+
 .rsvp__form__info__notes{
   text-align: left;
   margin-top: 60px;
@@ -510,6 +591,7 @@ input[name='family-member']{
 
 .rsvp__form__info{
   padding: 40px 0;
+  margin-top: 50px;
   background-color: #6fa2a9;
   display: none;
 }
@@ -539,6 +621,19 @@ input[type="radio"] {
 .radio-select {
   -webkit-align-self: flex-start;
   align-self: flex-start;
+  margin-right: 50px;
+}
+
+@media screen and (max-width: 700px) {
+  
+  .radio-select{
+    margin-right: 0;
+  }
+
+  .radio-select{
+    margin-top: 30px;
+  }
+  
 }
 
 

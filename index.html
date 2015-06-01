@@ -90,19 +90,20 @@
     </section>
     <!-- rsvp form section -->
     <section id="rsvp" class="rsvp">
+    <form action="rsvp.php" method="post" class="rsvp__form">
       <div class="wrapper">
-        <img src="images/rsvp.png" alt="rsvp image" class="rsvp__image">
-        <form action="rsvp2.php" method="post" class="rsvp__form">
+        <img src="images/rsvp.png" alt="rsvp image" class="rsvp__image" />
+        
           <label>
-            <input type="text" name="name" id="fullname" placeholder="full name" class="textinput" required>
+            <input type="text" name="name" id="fullname" placeholder="full name" class="textinput">
           </label>
           <div class="rsvp__form__radio-selection">
             <div class="radio-select">
-              <input type="radio" name="attendancechoice" value="wouldn't miss it for the world" id="attending" class="radiobtn" required >
+              <input type="radio" name="attendancechoice" value="wouldn't miss it for the world" id="attending" class="radiobtn" >
               <label for="attending">wouldn't miss it for the world</label>
             </div>
             <div class="radio-select">
-              <input type="radio" name="attendancechoice" value="will be there in spirit" id="not-attending"class="radiobtn" required>
+              <input type="radio" name="attendancechoice" value="will be there in spirit" id="not-attending"class="radiobtn">
               <label for="not-attending">will be there in spirit</label>
             </div>
           </div>
@@ -113,7 +114,7 @@
             <div class="rsvp__form__radio-selection whos-attending">
               <p>who's attending:</p>
               <div class="radio-select">
-                <input type="radio" name="how-many" value="just me" id="just-me-radio" class="radiobtn" required >
+                <input type="radio" name="how-many" value="just me" id="just-me-radio" class="radiobtn" >
                 <label for="just-me-radio">just me</label>
               </div>
               <div class="radio-select">
@@ -128,8 +129,8 @@
             <div class="rsvp__form__info__notes">
               <input type="text" name="plus-1" id="plus1__text-input" class="textinput" placeholder="full name">
               <div id="family-member__input-section">
-                <div class="family-member__input" id="family-member__input">
-                  <input type="text" name="family-member" placeholder="full name">
+                <div class="family-member__input" >
+                  <input type="text" name="family-member[]" placeholder="full name">
                     <svg class="add-family-member-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50.5 50.5">
                       <title>add family member</title>
                       <circle id="add-family-member-btn-circle" fill="#7EB3BB" cx="25.2" cy="25.2" r="25.2"/>
@@ -140,14 +141,15 @@
               </div>
             <p class="rsvp__form__info__notes__message">Please let us know of any dietary restrictions or leave us a heartwarming message.</p>
             <textarea name="notes" class="rsvp__form__info__notes__textarea" placeholder="notes / well wishes"></textarea>
-            <input type="email" name="email" id="email" class="email" placeholder="email" required>
+            <input type="email" name="email" id="email" class="email" placeholder="email">
           </div>
           <div class="rsvp__form__submit-button">
             <input type="submit" name="rsvp__form__submit" value="Send RSVP" class="btn">
           </div>
-        </form>
+        
       </div>
     </div>
+    </form>
   </section>
 
 

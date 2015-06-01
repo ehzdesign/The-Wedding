@@ -165,15 +165,19 @@ $('input[type=radio]').on('click', function(event) {
 
 
 
-
+var countFamily =0;
 // add family member inputs
 // ======================================
 function addFamilyMember(){
-  $('.family-member__input:first').clone(true)
-  .hide()
+  countFamily++;
+  var x = $('.family-member__input:first').clone(true);
+  x.hide()
   .find("input:text").val("").end()
   .appendTo('#family-member__input-section')
   .fadeIn(300);
+
+  x.find('input').attr('name','family-member[]');
+
 }
 
 $('.add-family-member-btn').on('click', function(event) {
