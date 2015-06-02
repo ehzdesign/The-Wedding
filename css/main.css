@@ -55,6 +55,12 @@
 }
 
 
+@media screen and (max-width:770px) {
+  .navbar{
+    display: none;
+  }
+  
+}
 
 
 .main-nav{
@@ -76,6 +82,7 @@
   text-transform: uppercase;
   
 }
+
 
 
 .main-nav a {
@@ -478,18 +485,11 @@ FORM SECTION
 
 
 .rsvp__form{
-  width: 70%;
+  width: 100%;
   margin: 70px auto 0;
 
 }
 
-@media screen and (max-width: 700px) {
-
-  .rsvp__form{
-    width: 90%;
-  }
-  
-}
 
 
 
@@ -503,7 +503,19 @@ input[type='text'],[type="email"], .rsvp__form__info__notes__textarea{
   color: #7f7f7f;
 }
 
-input[name='family-member']{
+input[name='name']{
+  width: 70%;
+}
+
+@media screen and (max-width:700px) {
+  
+input[name='name']{
+  width: 95%;
+}
+
+}
+
+input[name='family-member[]']{
   margin: 0;
 
 }
@@ -554,6 +566,16 @@ input[name='family-member']{
   display: flex;
   -webkit-justify-content: space-between;
   justify-content: space-between;
+  width: 70%;
+  margin: 0 auto;
+
+}
+
+@media screen and (max-width:700px) {
+  
+  .rsvp__form__radio-selection{
+  width: 95%;
+  }
 
 }
 
@@ -579,9 +601,15 @@ input[name='family-member']{
 
   .whos-attending, .rsvp__form__info__notes,
   .rsvp__form__submit-button{
-    width: 90%;
+    width: 95%;
   }
   
+}
+
+@media screen {
+  .whos-attending p{
+    margin-bottom:20p;
+  }
 }
 
 .rsvp__form__info__notes{
@@ -621,20 +649,18 @@ input[type="radio"] {
 .radio-select {
   -webkit-align-self: flex-start;
   align-self: flex-start;
-  margin-right: 50px;
-}
-
-@media screen and (max-width: 700px) {
-  
-  .radio-select{
-    margin-right: 0;
-  }
-
-  .radio-select{
-    margin-top: 30px;
-  }
   
 }
+
+
+@media screen and (max-width: 600px) {
+  
+  .radio-select {
+    margin-top: 20px;
+  }
+
+}
+
 
 
 .rsvp__form__submit-button{
