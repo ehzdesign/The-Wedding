@@ -77,7 +77,7 @@ offset: '10%'
 
 $.ajax({
   type: 'GET',
-  url: "https://api.instagram.com/v1/tags/MyCuteNieceOlivia/media/recent?client_id=698a1ba199a648ceacf26e00e835f81a&count=14?callback=myCallBack",
+  url: "https://api.instagram.com/v1/tags/LisaChrisBff/media/recent?client_id=698a1ba199a648ceacf26e00e835f81a&count=14?callback=myCallBack",
   contentType: "application/json",
   dataType: "jsonp"
 }).done(function(data){
@@ -290,12 +290,32 @@ $form.submit(function(event){
 
 });
 
-
+ 
 
 
 
 
 });
+// function connectLiveFeed() {
+//       conn = new ab.Session('ws://ramirez-portfolio.com:8080',
+//               function () {
+//                 conn.subscribe('tag_dog', function (topic, data) {
 
+//                   data.title.data.forEach(function (element, index, array) {
+//                     //JSON IMAGE INFORMATION
+//                     console.log(element);
+//                     console.log(element.id);
+//                     console.log(element.images);
+//                     }
+//                   );
+//                 });
+//               },
+//               function () {
+//                 console.warn('WebSocket connection closed');
+//               },
+//               {'skipSubprotocolCheck': true}
+//       );
 
+//     }
 
+// connectLiveFeed();
