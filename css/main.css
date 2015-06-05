@@ -209,7 +209,7 @@ img.scroll-arrow {
 }
 
 @media screen and (max-width:600px) {
-  
+
   img.scroll-arrow{
     width: 11vmin;
   }
@@ -280,7 +280,7 @@ img.scroll-arrow {
   }
 
   @media screen and (max-width: 600px) {
-    
+
     .instafeed{
       width:1500px;
     }
@@ -473,10 +473,11 @@ FORM SECTION
 
 .rsvp__image{
   max-width: 30%;
+  margin-bottom: 40px;
 }
 
 @media screen and (max-width: 600px) {
-  
+
   .rsvp__image{
     max-width: 50%;
   }
@@ -486,7 +487,7 @@ FORM SECTION
 
 .rsvp__form{
   width: 100%;
-  margin: 70px auto 0;
+  margin: 30px auto 0;
 
 }
 
@@ -508,10 +509,10 @@ input[name='name']{
 }
 
 @media screen and (max-width:700px) {
-  
-input[name='name']{
-  width: 95%;
-}
+
+  input[name='name']{
+    width: 95%;
+  }
 
 }
 
@@ -572,9 +573,9 @@ input[name='family-member[]']{
 }
 
 @media screen and (max-width:700px) {
-  
+
   .rsvp__form__radio-selection{
-  width: 95%;
+    width: 95%;
   }
 
 }
@@ -654,7 +655,7 @@ input[type="radio"] {
 
 
 @media screen and (max-width: 600px) {
-  
+
   .radio-select {
     margin-top: 20px;
   }
@@ -669,9 +670,61 @@ input[type="radio"] {
 
 .btn{
   padding: 15px 30px;
+}
+
+.sendBtn{
   background-color: #d06060;
 }
 
 
 
+/*STATE CLASSES*/
+.error{
+  background-color: #DF4343;
+}
 
+.success{
+  background-color: #60D074;
+}
+
+
+#formMessages{
+  align-items:center;
+  -webkit-align-items:center;
+  justify-content:center;
+  -webkit-justify-content:center;
+  padding: 30px 0;
+  position: fixed;
+  width: 100vw;
+  z-index: 200;
+  top: 0;
+  color: white;
+  font-size: 2.4em;
+  text-align: center;
+  /*display: none;*/
+}
+
+@media screen and (max-width:600px) {
+  #formMessages{
+    font-size: 1.8em;
+  }
+}
+
+@font-face {
+  font-family:'FontAwesome';
+  src:url('../bower_components/fontawesome/fonts/FontAwesome.otf');
+}
+
+.successIcon::before{
+
+  content: '';
+  font-family: 'FontAwesome';
+  margin-right: 20px;
+}
+
+.errorIcon::before{
+  content: '';
+  font-family: 'FontAwesome';
+  margin-right: 20px;
+
+}

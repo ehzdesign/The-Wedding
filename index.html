@@ -8,8 +8,10 @@
 <link rel="stylesheet" href="bower_components/normalize.css/normalize.css">
 <link rel="stylesheet" href="css/main.css">
 <body>
-
-
+  <div id="formMessages">
+    <p class="formMessagesText"></p>
+  </div>
+  
   <!-- main-nav -->
   <nav class= "navbar">
     <ul class="main-nav" id="mainNav">
@@ -90,16 +92,16 @@
     </section>
     <!-- rsvp form section -->
     <section id="rsvp" class="rsvp">
-    <form action="rsvp.php" method="post" class="rsvp__form">
+    <form action="rsvp_chimp.php" method="post" id="rsvp__form" class="rsvp__form">
       <div class="wrapper">
         <img src="images/rsvp.png" alt="rsvp image" class="rsvp__image" />
         
           <label>
-            <input type="text" name="name" id="fullname" placeholder="full name" class="textinput">
+            <input type="text" name="name" id="fullname" placeholder="full name" class="textinput" required>
           </label>
           <div class="rsvp__form__radio-selection">
             <div class="radio-select">
-              <input type="radio" name="attendancechoice" value="wouldn't miss it for the world" id="attending" class="radiobtn" >
+              <input type="radio" name="attendancechoice" value="wouldn't miss it for the world" id="attending" class="radiobtn">
               <label for="attending">wouldn't miss it for the world</label>
             </div>
             <div class="radio-select">
@@ -115,7 +117,7 @@
               <p>who's attending:</p>
               <div class="radio-select">
                 <input type="radio" name="how-many" value="just me" id="just-me-radio" class="radiobtn" >
-                <label for="just-me-radio">just me</label>
+                <label for="just-me-radio" required>just me</label>
               </div>
               <div class="radio-select">
                 <input type="radio" name="how-many" value="plus 1" id="plus1-radio"class="radiobtn">
@@ -141,10 +143,10 @@
               </div>
             <p class="rsvp__form__info__notes__message">Please let us know of any dietary restrictions or leave us a heartwarming message.</p>
             <textarea name="notes" class="rsvp__form__info__notes__textarea" placeholder="notes / well wishes"></textarea>
-            <input type="email" name="email" id="email" class="email" placeholder="email">
+            <input type="email" name="email" id="email" class="email" placeholder="email" required>
           </div>
           <div class="rsvp__form__submit-button">
-            <input type="submit" name="rsvp__form__submit" value="Send RSVP" class="btn">
+            <input type="submit" name="rsvp__form__submit" value="Send RSVP" class=" btn sendBtn" id="submitFormBtn">
           </div>
         
       </div>
