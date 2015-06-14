@@ -21,6 +21,9 @@
     border: none;
   }
 
+  ul{
+    list-style-type: none;
+  }
 
 
 
@@ -109,6 +112,94 @@
   
 }
 
+/*******************************
+ MOBILE NAV
+ *******************************/
+
+ .icon{
+  display: none;
+  left: 87%;
+}
+
+.mobilenav{
+  /*background-color: #d06060;*/
+  background-color: #7EB3BB;
+}
+
+.mobilenav > ul {
+  position: relative;
+  top: 100px;
+}
+
+.hamburger-bg{
+  height: 33px;
+  width: 38px;
+  background-color: rgb(166, 211, 218);
+  left: -7px;
+  top: -1px;
+  position: relative;
+}
+
+.mobilenav li:nth-child(2){
+  -webkit-animation-delay:.1s;
+  animation-delay:.1s;
+}
+
+.mobilenav li:nth-child(3){
+  -webkit-animation-delay:.2s;
+  animation-delay:.2s;
+}
+
+.mobilenav li:nth-child(4){
+  -webkit-animation-delay:.3s;
+  animation-delay:.3s;
+}
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@media screen and (max-width:770px) {
+  .icon{
+    display: block;
+  }
+}
+
+
+
 
 
 /*******************************
@@ -155,9 +246,16 @@
   display: -webkit-flex;
   -webkit-align-items: center;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 60px;
 }
 
+
+@media screen and (max-width:600px) {
+  .countdown{
+    padding-top: 30px;
+  }
+  
+}
 
 
 
@@ -446,13 +544,20 @@ img.scroll-arrow {
 
 
 /*******************************
-HONEYFUND SECTION
+CHURCH GALLERY SECTION
 *******************************/
-/*.honeyfund__gallery__image-container{
-  width: 33.333%;
-  float: left;
-  }*/
+.church-gallery {
+  display: -webkit-flex;
+  display: flex;
+}
 
+.church-gallery__image-container{
+  width: 33.3%;
+}
+
+.church-gallery__image {
+  vertical-align: bottom;
+}
 
 
 
@@ -701,7 +806,7 @@ input[type="radio"] {
   color: white;
   font-size: 2.4em;
   text-align: center;
-  /*display: none;*/
+  display: none;
 }
 
 @media screen and (max-width:600px) {

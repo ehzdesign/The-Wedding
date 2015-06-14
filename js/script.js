@@ -2,6 +2,7 @@ $(function(){
 
 // Smooth scroll on nav links
 // ==========================================
+
 $('#mainNav a, #countdown a').smoothScroll();
 
 
@@ -34,7 +35,7 @@ $('.clock').countdown('2015/09/14', function(event) {
 // =======================================
 
 var waypoint = new Waypoint({
-  element: document.getElementById('instagram'),
+  element: document.getElementById('details'),
   handler: function(direction) {
 
    if(direction === 'down') {
@@ -51,33 +52,37 @@ var waypoint = new Waypoint({
 
 },
 offset: '10%'
-})
+});
 
 
-// Instagram feed script
-// ===================================
+// Mobile nav
+// =======================================
 
-//  var feed = new Instafeed({
-//         get: 'tagged',
-//         tagName: 'MyCuteNieceOlivia', 
 
-//         clientId: '698a1ba199a648ceacf26e00e835f81a',
-//         limit:'14'
-//     });
-//     feed.run();
+    $(".icon").click(function () {
+        $(".mobilenav").fadeToggle(500);
+        $(".top-menu").toggleClass("top-animate");
+        $(".mid-menu").toggleClass("mid-animate");
+        $(".bottom-menu").toggleClass("bottom-animate");
+    });
 
-// setInterval(function(){
-//   $('#instafeed').fadeOut('fast', function() {
-//     $(this).html(' ');
-//   feed.run();
-//   $('#instafeed').fadeIn('slow');
-//     console.log('fade in');
-//   });
-// }, 80000);  
+    $('.mobilenav a').click( function(){
+        $('.mobilenav').fadeToggle(500);
+        $(".top-menu").toggleClass("top-animate");
+        $(".mid-menu").toggleClass("mid-animate");
+        $(".bottom-menu").toggleClass("bottom-animate");
+    });
+
+
+
+
+
+// uncomment below to activate instagram feed
 
 $.ajax({
   type: 'GET',
   url: "https://api.instagram.com/v1/tags/LisaChrisBff/media/recent?client_id=698a1ba199a648ceacf26e00e835f81a&count=14?callback=myCallBack",
+  // url: "https://api.instagram.com/v1/tags/totoro/media/recent?client_id=698a1ba199a648ceacf26e00e835f81a&count=14?callback=myCallBack",
   contentType: "application/json",
   dataType: "jsonp"
 }).done(function(data){
@@ -187,17 +192,18 @@ $('.add-family-member-btn').on('click', function(event) {
   addFamilyMember();
 });
 
-
-// form submission (ajax request)
-// ======================================
+//Form success and error function
+// =====================================
 
 var $form = $('#rsvp__form');
+var $submitFormBtn = $('#submitFormBtn');
 console.log($form.attr('action'));
 
 var $formMessages = $('#formMessages');
 var $formMessagesText = $('.formMessagesText');
 
-function successMessage(){
+function successMessage(){    // the success form message function
+
 
   $formMessagesText.text('Whatever you did it was a success!')
   $formMessagesText.addClass('successIcon');
@@ -213,7 +219,7 @@ function successMessage(){
 }
 
 
-function errorMessage(){
+function errorMessage(){ // the error form message function
   $formMessagesText.addClass('errorIcon');
   $formMessages.addClass('error')
   .css({
@@ -227,8 +233,8 @@ function errorMessage(){
 }
 
 
-var $form = $('#rsvp__form'); //get form
-
+// form submission (ajax request)
+// ======================================
 
 $form.submit(function(event){
 
@@ -242,32 +248,41 @@ $form.submit(function(event){
     data: formData
   })
   .done(function(response) {  //what fires when submission is complete
-   var $submitFormBtn = $('#submitFormBtn');
    console.log(response);
 
    $submitFormBtn.prop('disabled', true);
-   
-   $form.trigger('reset'); //clear form fields after form submission
+
+
+   // $form.trigger('reset'); //clear form fields after form submission
    
    $submitFormBtn.val('Thank You') //change submit button appearance
    .removeClass('sendBtn')
    .addClass('success');
 
-   successMessage();
+    $submitFormBtn.show()//hide form except for thank you button/message
+    .parentsUntil($form)
+    .addBack()
+    .siblings()
+    .hide();
+    console.log('form hidden');
+
+    $submitFormBtn.parent()
+    .css('text-align', 'center');
+
+   successMessage(); //Line 201
    
 
    console.log("form submission success");
-    // make a formMessages div
-    // $(formMessages).removeClass('error');
-    // $(formMessages).removeClass('success');
-    // $(formMessages).text('response');
+  
 
-    //clear all form inputs
+    
   })
   .fail(function(data) {
+    
     console.log("error");
-    // $(formMessages).removeClass('success');
-    // $(formMessages).removeClass('error');
+    console.log(data.status);
+
+
     if(data.responseText !== ''){
       console.log(data.status);
       errorMessage();
@@ -278,7 +293,7 @@ $form.submit(function(event){
       }
     }else{
       errorMessage();
-      $formMessages.text('Oops! An error occured and your message could not be sent.');
+      $formMessagesText.text('Oops! An error occured and your message could not be sent.');
     }
   })
   .always(function() {

@@ -1,4 +1,7 @@
 <?php
+// ini_set('display_errors',1);
+// ini_set('display_startup_errors',1);
+// error_reporting(-1);
 /* @var $c Mailchimp_Campaigns */
 /* @var $l Mailchimp_Lists */
 /* @var $t Mailchimp_Templates */
@@ -73,7 +76,7 @@ $createCampainArray = array(
    'list_id' => '9daa47dc5a',
     'subject'=> 'The Wedding',
     'from_email' => '91.eahz@gmail.com',
-    'from_name' => 'Chris and Lisa Wedding',
+    'from_name' => 'Lisa and Chris Wedding',
     'to_name' => 'My BROTHER',
     'inline_css' => true,
     
